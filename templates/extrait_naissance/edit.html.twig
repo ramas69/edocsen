@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ExtraitNaissance{% endblock %}
+
+{% block body %}
+    <h1>Edit ExtraitNaissance</h1>
+
+    {{ include('extrait_naissance/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('extrait_naissance_index') }}">back to list</a>
+
+    {{ include('extrait_naissance/_delete_form.html.twig') }}
+{% endblock %}

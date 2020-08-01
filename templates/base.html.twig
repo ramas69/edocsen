@@ -2,11 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">        
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js" integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link href="{{ asset('assets/css/materialdesignicons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% include 'header.html.twig' %}
+        {% block body %}
+        <a class="waves-effect waves-light btn">button</a>
+        {% endblock %}
+        {% include 'footer.html.twig' %}
         {% block javascripts %}{% endblock %}
+     <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('assets/js/scrollspy.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.easing.min.js')}}"></script>
+    <!-- feather icon -->
+    <script src="{{ asset('assets/js/feather.js')}}"></script>
+    <!-- unicons icon -->
+    <script src="{{ asset('assets/js/unicons.js')}}"></script>
+    <!-- Main Js -->
+    <script src="{{ asset('assets/js/app.js')}}"></script>
     </body>
 </html>

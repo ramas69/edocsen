@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ExtraitNaissance index{% endblock %}
+
+{% block body %}
+    <h1>ExtraitNaissance index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>DateNaissance</th>
+                <th>LieuDeNaissance</th>
+                <th>Sexe</th>
+                <th>PrenomPere</th>
+                <th>PrenomMere</th>
+                <th>NomPere</th>
+                <th>NomMere</th>
+                <th>NumeroRegistre</th>
+                <th>DocumentJoint</th>
+                <th>Region</th>
+                <th>Departement</th>
+                <th>Commune</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for extrait_naissance in extrait_naissances %}
+            <tr>
+                <td>{{ extrait_naissance.id }}</td>
+                <td>{{ extrait_naissance.Nom }}</td>
+                <td>{{ extrait_naissance.Prenom }}</td>
+                <td>{{ extrait_naissance.DateNaissance ? extrait_naissance.DateNaissance|date('Y-m-d') : '' }}</td>
+                <td>{{ extrait_naissance.LieuDeNaissance }}</td>
+                <td>{{ extrait_naissance.Sexe }}</td>
+                <td>{{ extrait_naissance.PrenomPere }}</td>
+                <td>{{ extrait_naissance.PrenomMere }}</td>
+                <td>{{ extrait_naissance.NomPere }}</td>
+                <td>{{ extrait_naissance.NomMere }}</td>
+                <td>{{ extrait_naissance.NumeroRegistre }}</td>
+                <td>{{ extrait_naissance.documentJoint }}</td>
+                <td>{{ extrait_naissance.Region }}</td>
+                <td>{{ extrait_naissance.Departement }}</td>
+                <td>{{ extrait_naissance.Commune }}</td>
+                <td>
+                    <a href="{{ path('extrait_naissance_show', {'id': extrait_naissance.id}) }}">show</a>
+                    <a href="{{ path('extrait_naissance_edit', {'id': extrait_naissance.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="16">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('extrait_naissance_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ExtraitNaissance{% endblock %}
+
+{% block body %}
+    <h1>ExtraitNaissance</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ extrait_naissance.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ extrait_naissance.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ extrait_naissance.Prenom }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ extrait_naissance.DateNaissance ? extrait_naissance.DateNaissance|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>LieuDeNaissance</th>
+                <td>{{ extrait_naissance.LieuDeNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ extrait_naissance.Sexe }}</td>
+            </tr>
+            <tr>
+                <th>PrenomPere</th>
+                <td>{{ extrait_naissance.PrenomPere }}</td>
+            </tr>
+            <tr>
+                <th>PrenomMere</th>
+                <td>{{ extrait_naissance.PrenomMere }}</td>
+            </tr>
+            <tr>
+                <th>NomPere</th>
+                <td>{{ extrait_naissance.NomPere }}</td>
+            </tr>
+            <tr>
+                <th>NomMere</th>
+                <td>{{ extrait_naissance.NomMere }}</td>
+            </tr>
+            <tr>
+                <th>NumeroRegistre</th>
+                <td>{{ extrait_naissance.NumeroRegistre }}</td>
+            </tr>
+            <tr>
+                <th>DocumentJoint</th>
+                <td>{{ extrait_naissance.documentJoint }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ extrait_naissance.Region }}</td>
+            </tr>
+            <tr>
+                <th>Departement</th>
+                <td>{{ extrait_naissance.Departement }}</td>
+            </tr>
+            <tr>
+                <th>Commune</th>
+                <td>{{ extrait_naissance.Commune }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('extrait_naissance_index') }}">back to list</a>
+
+    <a href="{{ path('extrait_naissance_edit', {'id': extrait_naissance.id}) }}">edit</a>
+
+    {{ include('extrait_naissance/_delete_form.html.twig') }}
+{% endblock %}
