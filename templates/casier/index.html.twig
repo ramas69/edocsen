@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Casier index{% endblock %}
+
+{% block body %}
+    <h1>Casier index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>NomPrenomPere</th>
+                <th>NomPrenomMere</th>
+                <th>DateNaissance</th>
+                <th>LieuNaissance</th>
+                <th>Domicile</th>
+                <th>Profession</th>
+                <th>Nationalite</th>
+                <th>Demandeur</th>
+                <th>NomClient</th>
+                <th>PrenomClient</th>
+                <th>Adresse</th>
+                <th>CodePostal</th>
+                <th>Ville</th>
+                <th>Pays</th>
+                <th>Telephone</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for casier in casiers %}
+            <tr>
+                <td>{{ casier.id }}</td>
+                <td>{{ casier.nom }}</td>
+                <td>{{ casier.prenom }}</td>
+                <td>{{ casier.nomPrenomPere }}</td>
+                <td>{{ casier.nomPrenomMere }}</td>
+                <td>{{ casier.dateNaissance ? casier.dateNaissance|date('Y-m-d') : '' }}</td>
+                <td>{{ casier.lieuNaissance }}</td>
+                <td>{{ casier.domicile }}</td>
+                <td>{{ casier.profession }}</td>
+                <td>{{ casier.nationalite }}</td>
+                <td>{{ casier.demandeur }}</td>
+                <td>{{ casier.nomClient }}</td>
+                <td>{{ casier.prenomClient }}</td>
+                <td>{{ casier.adresse }}</td>
+                <td>{{ casier.codePostal }}</td>
+                <td>{{ casier.ville }}</td>
+                <td>{{ casier.pays }}</td>
+                <td>{{ casier.telephone }}</td>
+                <td>
+                    <a href="{{ path('casier_show', {'id': casier.id}) }}">show</a>
+                    <a href="{{ path('casier_edit', {'id': casier.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="19">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('casier_new') }}">Create new</a>
+{% endblock %}

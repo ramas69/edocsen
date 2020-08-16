@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Deces{% endblock %}
+
+{% block body %}
+    <h1>Deces</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ dece.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ dece.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ dece.prenom }}</td>
+            </tr>
+            <tr>
+                <th>DateDeces</th>
+                <td>{{ dece.dateDeces ? dece.dateDeces|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>LieuDeces</th>
+                <td>{{ dece.lieuDeces }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ dece.sexe }}</td>
+            </tr>
+            <tr>
+                <th>NomPere</th>
+                <td>{{ dece.nomPere }}</td>
+            </tr>
+            <tr>
+                <th>NomMere</th>
+                <td>{{ dece.nomMere }}</td>
+            </tr>
+            <tr>
+                <th>PrenomPere</th>
+                <td>{{ dece.prenomPere }}</td>
+            </tr>
+            <tr>
+                <th>PrenomMere</th>
+                <td>{{ dece.prenomMere }}</td>
+            </tr>
+            <tr>
+                <th>NumeroRegistre</th>
+                <td>{{ dece.numeroRegistre }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ dece.region }}</td>
+            </tr>
+            <tr>
+                <th>Departement</th>
+                <td>{{ dece.departement }}</td>
+            </tr>
+            <tr>
+                <th>Commune</th>
+                <td>{{ dece.commune }}</td>
+            </tr>
+            <tr>
+                <th>Civilite</th>
+                <td>{{ dece.civilite }}</td>
+            </tr>
+            <tr>
+                <th>DocumentJoint</th>
+                <td>{{ dece.documentJoint }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ dece.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Demandeur</th>
+                <td>{{ dece.demandeur }}</td>
+            </tr>
+            <tr>
+                <th>NomClient</th>
+                <td>{{ dece.nomClient }}</td>
+            </tr>
+            <tr>
+                <th>PrenomClient</th>
+                <td>{{ dece.prenomClient }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ dece.adresse }}</td>
+            </tr>
+            <tr>
+                <th>CodePostal</th>
+                <td>{{ dece.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ dece.Ville }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ dece.pays }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ dece.telephone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('deces_index') }}">back to list</a>
+
+    <a href="{{ path('deces_edit', {'id': dece.id}) }}">edit</a>
+
+    {{ include('deces/_delete_form.html.twig') }}
+{% endblock %}

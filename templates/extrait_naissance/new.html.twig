@@ -1,11 +1,82 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New ExtraitNaissance{% endblock %}
+{% block title %}Extrait naissance{% endblock %}
 
 {% block body %}
-    <h1>Create new ExtraitNaissance</h1>
 
-    {{ include('extrait_naissance/_form.html.twig') }}
+<style>
 
-    <a href="{{ path('extrait_naissance_index') }}">back to list</a>
+.form-control {
+  
+    background-color: white;
+    border: 1px solid rgba(158, 156, 185, 0.3);
+}
+
+.etape1{
+   
+}
+</style>
+ 
+{#  <section class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <a href="{{ "naissance"}}" class="commande">
+                    <div class="wc-box rounded text-center wc-box-primary p-1 mt-md-1">
+                        <div class="wc-box-icon">
+                            <i class="mdi mdi-numeric-1-box-multiple-outline"></i>
+                        </div>
+                        <h5 class="font-weight-bold mb-2 wc-title mt-4 " >Acte de naissance</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ "naissance"}}" class="commande">
+                    <div class="wc-box rounded text-center wc-box-primary p-1 mt-md-1">
+                        <div class="wc-box-icon">
+                            <i class="mdi mdi-numeric-2-box-multiple-outline"></i>
+                        </div>
+                        <h5 class="font-weight-bold mb-2 wc-title mt-4 " >Acte de mariage</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ "naissance"}}" class="commande">
+                    <div class="wc-box rounded text-center wc-box-primary p-1 mt-md-1">
+                        <div class="wc-box-icon">
+                            <i class="mdi mdi-numeric-3-box-multiple-outline"></i>
+                        </div>
+                        <h5 class="font-weight-bold mb-2 wc-title mt-4 " >Acte de décès</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ "naissance"}}" class="commande">
+                    <div class="wc-box rounded text-center wc-box-primary p-1 mt-md-1">
+                        <div class="wc-box-icon">
+                            <i class="mdi mdi-numeric-4-box-multiple-outline"></i>
+                        </div>
+                        <h5 class="font-weight-bold mb-2 wc-title mt-4 " >Casier judiciaire</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section> #}
+      
+    <section class="section">
+    <section class="section feather-bg-img mt-2 h-50" style="background-image: url({{asset('assets/images/afrique1.jpg')}})">
+    </section>
+        <div class="container">
+           <h2 class="hero-2-title text-shadow text-dark font-weight-bold my-2 m-5 text-center">Completez le formulaire pour commander votre document</h2>
+
+            <div class="row align-items-center m-3 p-3" style="background-color: rgba(255, 169, 49, 0.12);">
+                <div class="col-lg-12">
+                    <div class="mb-4 mb-lg-0">
+                        {{ include('extrait_naissance/_form.html.twig') }}
+                    </div>
+                </div>
+             </div>
+         </div>
+    </section>
 {% endblock %}

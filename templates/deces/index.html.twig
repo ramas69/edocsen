@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Deces index{% endblock %}
+
+{% block body %}
+    <h1>Deces index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>DateDeces</th>
+                <th>LieuDeces</th>
+                <th>Sexe</th>
+                <th>NomPere</th>
+                <th>NomMere</th>
+                <th>PrenomPere</th>
+                <th>PrenomMere</th>
+                <th>NumeroRegistre</th>
+                <th>Region</th>
+                <th>Departement</th>
+                <th>Commune</th>
+                <th>Civilite</th>
+                <th>DocumentJoint</th>
+                <th>Nombre</th>
+                <th>Demandeur</th>
+                <th>NomClient</th>
+                <th>PrenomClient</th>
+                <th>Adresse</th>
+                <th>CodePostal</th>
+                <th>Ville</th>
+                <th>Pays</th>
+                <th>Telephone</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dece in deces %}
+            <tr>
+                <td>{{ dece.id }}</td>
+                <td>{{ dece.nom }}</td>
+                <td>{{ dece.prenom }}</td>
+                <td>{{ dece.dateDeces ? dece.dateDeces|date('Y-m-d') : '' }}</td>
+                <td>{{ dece.lieuDeces }}</td>
+                <td>{{ dece.sexe }}</td>
+                <td>{{ dece.nomPere }}</td>
+                <td>{{ dece.nomMere }}</td>
+                <td>{{ dece.prenomPere }}</td>
+                <td>{{ dece.prenomMere }}</td>
+                <td>{{ dece.numeroRegistre }}</td>
+                <td>{{ dece.region }}</td>
+                <td>{{ dece.departement }}</td>
+                <td>{{ dece.commune }}</td>
+                <td>{{ dece.civilite }}</td>
+                <td>{{ dece.documentJoint }}</td>
+                <td>{{ dece.nombre }}</td>
+                <td>{{ dece.demandeur }}</td>
+                <td>{{ dece.nomClient }}</td>
+                <td>{{ dece.prenomClient }}</td>
+                <td>{{ dece.adresse }}</td>
+                <td>{{ dece.codePostal }}</td>
+                <td>{{ dece.Ville }}</td>
+                <td>{{ dece.pays }}</td>
+                <td>{{ dece.telephone }}</td>
+                <td>
+                    <a href="{{ path('deces_show', {'id': dece.id}) }}">show</a>
+                    <a href="{{ path('deces_edit', {'id': dece.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="26">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('deces_new') }}">Create new</a>
+{% endblock %}

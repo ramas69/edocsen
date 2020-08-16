@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Casier{% endblock %}
+
+{% block body %}
+    <h1>Casier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ casier.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ casier.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ casier.prenom }}</td>
+            </tr>
+            <tr>
+                <th>NomPrenomPere</th>
+                <td>{{ casier.nomPrenomPere }}</td>
+            </tr>
+            <tr>
+                <th>NomPrenomMere</th>
+                <td>{{ casier.nomPrenomMere }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ casier.dateNaissance ? casier.dateNaissance|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>LieuNaissance</th>
+                <td>{{ casier.lieuNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Domicile</th>
+                <td>{{ casier.domicile }}</td>
+            </tr>
+            <tr>
+                <th>Profession</th>
+                <td>{{ casier.profession }}</td>
+            </tr>
+            <tr>
+                <th>Nationalite</th>
+                <td>{{ casier.nationalite }}</td>
+            </tr>
+            <tr>
+                <th>Demandeur</th>
+                <td>{{ casier.demandeur }}</td>
+            </tr>
+            <tr>
+                <th>NomClient</th>
+                <td>{{ casier.nomClient }}</td>
+            </tr>
+            <tr>
+                <th>PrenomClient</th>
+                <td>{{ casier.prenomClient }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ casier.adresse }}</td>
+            </tr>
+            <tr>
+                <th>CodePostal</th>
+                <td>{{ casier.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ casier.ville }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ casier.pays }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ casier.telephone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('casier_index') }}">back to list</a>
+
+    <a href="{{ path('casier_edit', {'id': casier.id}) }}">edit</a>
+
+    {{ include('casier/_delete_form.html.twig') }}
+{% endblock %}

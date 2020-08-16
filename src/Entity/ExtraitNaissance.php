@@ -87,6 +87,70 @@ class ExtraitNaissance
      */
     private $Commune;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $civilite;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $type;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $nombre;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $demandeur;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $NomClient;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $PrenomClient;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $codePostal;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Pays;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $PaysNaissance;
+
+
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -259,4 +323,153 @@ class ExtraitNaissance
 
         return $this;
     }
+
+    public function getCivilite(): ?string
+    {
+        return $this->civilite;
+    }
+
+    public function setCivilite(string $civilite): self
+    {
+        $this->civilite = $civilite;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): self
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    public function getNombre(): ?int
+    {
+        return $this->nombre;
+    }
+
+    public function setNombre(int $nombre): self
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    public function getDemandeur(): ?string
+    {
+        return $this->demandeur;
+    }
+
+    public function setDemandeur(string $demandeur): self
+    {
+        $this->demandeur = $demandeur;
+
+        return $this;
+    }
+
+    public function getNomClient(): ?string
+    {
+        return $this->NomClient;
+    }
+
+    public function setNomClient(string $NomClient): self
+    {
+        $this->NomClient = $NomClient;
+
+        return $this;
+    }
+
+    public function getPrenomClient(): ?string
+    {
+        return $this->PrenomClient;
+    }
+
+    public function setPrenomClient(string $PrenomClient): self
+    {
+        $this->PrenomClient = $PrenomClient;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?int
+    {
+        return $this->codePostal;
+    }
+
+    public function setCodePostal(int $codePostal): self
+    {
+        $this->codePostal = $codePostal;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getPays(): ?string
+    {
+        return $this->Pays;
+    }
+
+    public function setPays(string $Pays): self
+    {
+        $this->Pays = $Pays;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?int
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(int $telephone): self
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getPaysNaissance(): ?string
+    {
+        return $this->PaysNaissance;
+    }
+
+    public function setPaysNaissance(string $PaysNaissance): self
+    {
+        $this->PaysNaissance = $PaysNaissance;
+
+        return $this;
+    }
+
+   
+  
+
+   
 }

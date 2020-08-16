@@ -11,21 +11,24 @@
 	// STICKY
 	$(window).scroll(function() {
 	    var scroll = $(window).scrollTop();
-
+		console.log('test');
 	    if (scroll >= 50) {
-	        $(".sticky").addClass("nav-sticky");
+			$(".sticky").addClass("nav-sticky");
+			$("img.logo-dark").css("height", "48").fadeIn("slow");
 	    } else {
-	        $(".sticky").removeClass("nav-sticky");
+			$(".sticky").removeClass("nav-sticky");
+			$("img.logo-dark").css("height", "96").fadeIn("slow");
+		
 	    }
 	});
 
 
 	// SmoothLink
-	$('.nav-item a, .mouse-down a').on('click', function(event) {
+	$('.nav-item a, .mouse-down a, .mouseD').on('click', function(event) {
 	    var $anchor = $(this);
 	    $('html, body').stop().animate({
 	        scrollTop: $($anchor.attr('href')).offset().top - 0
-	    }, 1500, 'easeInOutExpo');
+	    }, 2000, 'easeInOutExpo');
 	    event.preventDefault();
 	});
 

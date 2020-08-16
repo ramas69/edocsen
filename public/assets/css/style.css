@@ -70,13 +70,22 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+img#logo-dark.logo-dark{
+  width: 3.5em;
+}
+
+img.logo-darkT{
+  width: 2em !important;
+}
+
+
 .navbar-custom .logo .ligo-light {
   display: inline-block;
 }
 
 .navbar-custom .navbar-nav li a {
   line-height: 26px;
-  color: rgba(255, 255, 255);
+  color: #FFA931 !important;
   font-size: 1em;
   font-weight: 700;
   -webkit-transition: all 0.3s;
@@ -110,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-custom .logo .logo-dark {
   display: inline-block;
+
 }
 
 .navbar-custom .logo .logo-light {
