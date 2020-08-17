@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img#logo-dark.logo-dark{
-  width: 3.5em;
+  width: 2.5em;
 }
 
 img.logo-darkT{
@@ -978,8 +978,8 @@ a.commande{
 }
 
 .section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 92px;
+  padding-bottom: 82px;
   position: relative;
 }
 
@@ -995,7 +995,7 @@ a.commande{
 
 .bg-gradient-primary {
   background: -webkit-gradient(linear, left bottom, left top, from(#4fccdc), to(#FFA931));
-  background: linear-gradient(to top, #4fccdc 0%, #FFA931100%);
+  background: linear-gradient(to top, #4fccdc 0%, #FFA931 100%);
 }
 
 .line-height-1_6 {

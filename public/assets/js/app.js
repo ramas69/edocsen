@@ -11,13 +11,12 @@
 	// STICKY
 	$(window).scroll(function() {
 	    var scroll = $(window).scrollTop();
-		console.log('test');
 	    if (scroll >= 50) {
 			$(".sticky").addClass("nav-sticky");
-			$("img.logo-dark").css("height", "48").fadeIn("slow");
+			$("img.logo-dark").css("width", "1.5em").fadeIn("slow");
 	    } else {
 			$(".sticky").removeClass("nav-sticky");
-			$("img.logo-dark").css("height", "96").fadeIn("slow");
+			$("img.logo-dark").css("width", "2.5em").fadeIn("slow");
 		
 	    }
 	});
@@ -83,6 +82,7 @@
 
 	});
 
+	
 	// feather icon
 	feather.replace()
 

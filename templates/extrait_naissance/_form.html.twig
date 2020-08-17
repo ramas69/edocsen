@@ -3,8 +3,8 @@
      <section class="section " id="contact">
         <div class="container">
             
-            <div class="row align-items-center">
-                <div class="col-lg-12">
+            <div class="row align-items-center" id="ici">
+                <div class="col-lg-12" id="ici">
                     <div class="custom-form mb-5 mb-lg-0">
                         <div class="etape1">
                             <h3 class="title mb-3">Etape 1</h3>
@@ -122,20 +122,84 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <button class="btn badge badge-soft-primary text-uppercase">{{ button_label|default('Valider') }}</button>
-                                    <div id="simple-msg"></div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a href="#ici" class="btn badge badge-soft-primary text-uppercase" id="suivant">Suivant</a>
+                                        <div id="simple-msg"></div>
+                                    </div>
                                 </div>
                             </div>
-                
                         </div>
+                        <div ></div>
+                         <div class="etape2" >
+                            <h3 class="title mb-3">Etape 2</h3>
+                            <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.Civilite, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.NomClient, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.PrenomClient, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.Adresse, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.CodePostal, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.Ville, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.Pays, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row (form.Telephone, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                         <div class="row">
+                         <div class="col-sm-6">
+                                        <a  class="btn badge badge-soft-primary text-uppercase " id="precedent">Précedent</a>
+                                        <div id="simple-msg"></div>
+                                    </div>
+                            <div class="col-sm-6">
+                                <button class="btn badge badge-soft-primary text-uppercase">{{ button_label|default('Valider') }}</button>
+                                <div id="simple-msg"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                
             </div>
         </div>
+        
     </section>
+    
+    
 {{ form_end(form) }}
 
