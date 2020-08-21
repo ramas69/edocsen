@@ -2,18 +2,32 @@
 
 {% block title %}Acte mariage{% endblock %}
 
+
+
 {% block body %}
 
-<section class="section">
-<section class="section feather-bg-img mt-2 h-50" style="background-image: url({{asset('assets/images/afrique1.jpg')}})">
+<style>
+
+.form-control {
+    background-color: white;
+    border: 1px solid rgba(158, 156, 185, 0.3);
+}
+
+.etape2{
+   display:none;
+}
+</style>
+
+ <section class="section">
+    <section class="section feather-bg-img mt-4 h-50" style="background-image: url({{asset('assets/images/afrique1.jpg')}})">
     </section>
         <div class="container">
            <h2 class="hero-2-title text-shadow text-dark font-weight-bold my-2 m-5 text-center">Completez le formulaire pour commander votre document</h2>
 
             <div class="row align-items-center m-3 p-3" style="background-color: rgba(255, 169, 49, 0.12);">
-                <div class="col-lg-4">
+                <div class="col-lg-12"  >
                     <div class="mb-4 mb-lg-0">
-                       {{ include('mariage/_form.html.twig') }}
+                        {{ include('mariage/_form.html.twig') }}
                     </div>
                 </div>
              </div>
